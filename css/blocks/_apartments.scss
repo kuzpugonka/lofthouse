@@ -1,0 +1,36 @@
+.apartments {
+    position: relative;
+
+    &::before {
+        content: "III"; 
+
+        position: absolute;
+        top: 0;
+        right: calc(50% + 555px);
+        transform: translate(50%, 0%);
+        line-height: 1.15;
+
+        opacity: 0.02;        
+        font-size: 400px;
+        // font-weight: 700;
+        font-family: $font-accent;
+
+    }
+}
+.apartments__title {
+    margin-bottom: 88px;
+
+    @media screen and (max-width: $tablet) {
+        margin-bottom: 44px;
+    }
+}
+
+.apartments__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    
+    @media screen and (max-width: $tablet) {
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));        
+    }
+}

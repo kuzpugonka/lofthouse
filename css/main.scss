@@ -1,0 +1,19 @@
+// Base
+@import './base/reset'; //сброс стилей
+@import './base/vars';  //переменные
+@import './base/base';  //базовые блоки
+
+//blocks
+@import './blocks/header';
+@import './blocks/nav';
+@import './blocks/nav-icon';
+@import './blocks/info';
+@import './blocks/benefits';
+@import './blocks/apartments';
+@import './blocks/cards';
+@import './blocks/cta';
+@import './blocks/form';
+@import './blocks/video';
+@import './blocks/section-map';
+@import './blocks/feedback';
+@import './blocks/footer'; 

@@ -1,0 +1,63 @@
+.video {
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+
+    &::after {
+        content: "IV"; 
+
+        position: absolute;
+        top: 0;
+        left: calc(50% + 555px);
+        transform: translate(-50%, 0%);
+        line-height: 1.45;
+
+        opacity: 0.02;        
+        font-size: 400px;
+        // font-weight: 700;
+        font-family: $font-accent;
+
+    }
+
+}
+.video__link {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(36, 43, 51, 0.8);
+        transition: background-color 0.2s ease-in;
+    }
+
+    &:hover::before {
+        background: rgba(36, 43, 51, 0.7);
+    }
+}
+// .video__img {
+// }
+.video__icon {
+    position: absolute;
+    z-index: 9;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease-in;
+
+    @media screen and (max-width: $tablet) {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.video__link:hover .video__icon {
+    transform: translate(-50%, -50%) scale(1.2);
+    filter: saturate(1.5); // осветляет на полтона
+}
